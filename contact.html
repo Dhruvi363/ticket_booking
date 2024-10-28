@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garba Night with ULC - Ticket Booking</title>
+    <link rel="stylesheet" href="./css/contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="https://www.instagram.com/udaipurlakecity/"><img src="./assests/ulclogo.png" alt="Garba Night Logo" class="logo"></a>
+            <h1>Garba Night with ULC</h1>
+            <p class="tagline">Dance, Celebrate, Rejoice!</p>
+        </header>
+        
+        <main>
+            <div class="dancer-silhouettes"></div>
+            <form id="booking-form">
+                <h2>Tell Us!</h2>
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="passes">Number of Passes Needed</label>
+                    <input type="number" id="passes" name="passes" required min="1">
+                </div>
+                <div class="form-group">
+                    <label for="mobile">Mobile Number</label>
+                    <input type="tel" id="mobile" name="mobile" required>
+                </div>
+                <button type="submit" class="submit-btn">Reserve My Spot</button>
+            </form>
+
+            <!-- "Thank You" message should be inside this hidden div -->
+            <div id="thank-you-message" class="thank-you-message" style="display: none;">
+                <h2>Thank You!</h2>
+                <p>We've received your reservation. We'll contact you shortly with more details.</p>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Join ULC for a night of Traditional Dance, Vibrant Music, and Festive Celebration!</p>
+        </footer>
+    </div>
+    <script type="module" src="./Js/contact.js"></script>
+</body>
+</html>

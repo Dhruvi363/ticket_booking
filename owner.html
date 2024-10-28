@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Dhruvi Mali</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pink: #FF1493;
+            --blue: #4169E1;
+            --purple: #8A2BE2;
+            --red: #FF4500;
+            --light: #FFF0F5;
+            --dark: #2C0A1E;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 3px solid var(--purple);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--purple);
+            text-shadow: 2px 2px var(--pink);
+            margin-bottom: 0.5rem;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: var(--blue);
+        }
+
+        main {
+            position: relative;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: var(--red);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info a {
+            color: var(--blue);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: var(--purple);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: transparent;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: var(--pink);
+            color : whitesmoke;
+        }
+        .social-links img{
+            height: 44px;
+            width: 44px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <!-- <img src="./assests/owner.jpeg" alt="Dhruvi Mali" class="profile-img"> -->
+            <h1>Dhruvi Mali</h1>
+            <p class="tagline">Creator and Owner of the Website</p>
+        </header>
+
+        <main>
+            <h2>Contact Me</h2>
+            <div class="contact-info">
+                <p>Feel free to reach out to me directly:</p>
+                <p>Phone: <a href="tel:+910000000000">+91 0000000000</a></p>
+                <p>Instagram: <a href="https://www.instagram.com/dhruvi_363">dhruvi_363</a></p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/dhruvi_363" target="_blank"><img src="./assests/instagram.png" alt="Message Me on Instagram"></a>
+                    <a href="tel:+910000000000"><img src="./assests/telephone.png" alt="Call Now"></a>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

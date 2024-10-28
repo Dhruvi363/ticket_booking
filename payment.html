@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Garba Nights with ULC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/payment.css">
+</head>
+<body>
+    <div class="container">
+        <div class="garba-png garba-png-left"></div>
+        
+        <h1>Payment for Garba Nights</h1>
+        <div id="qrSection">
+            <div class="qr-container">
+                <img src="./assests/qr.png" alt="Payment QR Code" class="qr-code">
+            </div>
+            <div class="timer" id="timer">02:00</div>
+            <div class="user-info">
+                <p>Name: <span id="userName"></span></p>
+                <p>Amount to Pay: ₹<span id="amountToPay"></span></p>
+                <p>Date of Passes: <span id="passDate"></span></p>
+                <div id="alertBox" style="display:none; padding: 10px; margin-bottom: 10px; color: red !important; font-size: 15px !important; white-space: nowrap;"></div>
+                <div class="form-group refid">
+                    <label for="ref id">UPI Transaction Id:</label>
+                    <input type="text" id="upirefid" name="upirefid" required placeholder="12-digit UPI Transaction-Id" pattern="\d{12}" title="Only Numerical Values are allowed" maxlength="12">
+                </div>
+            </div>
+            
+            <div class="btn-container">
+                <button class="btn" id="paidBtn" disabled>Paid</button>
+                <button class="btn" id="codBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-banknote"><rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></svg>
+                    COD
+                </button>
+            </div>
+        </div>
+
+        <form id="paymentForm" class="hidden">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="amount">Amount Paid:</label>
+                <input type="number" id="amount" name="amount" required>
+            </div>
+            <div class="form-group">
+                <label for="passtDate">Date of Passes:</label>
+                <input type="text" id="passDateInput" name="passDate" readonly>
+            </div>
+            <div class="form-group">
+                <label for="contactNumber">Contact Number:</label>
+                <input type="text" id="contactNumberInput" name="contactNumber" readonly>
+            </div>
+            <div class="btn-container">
+                <button type="submit" class="btn" id="submitBtn">Submit</button>
+            </div>
+        </form>
+
+        <div id="thankYouMessage" class="hidden">
+            <h2>Thank you for your order!</h2>
+            <p>Our team will contact you for payment confirmation.</p>
+            <p>Your passes are valid for: <span id="confirmationDate"></span></p>
+            <p>We will contact you at: <span id="confirmationContact"></span></p>
+            <div class="contact-us">
+                <a href="owner.html" class="contact-btn">Contact Us</a>
+            </div>
+        </div>
+    </div>
+   <script type="module" src="./Js/payment.js"></script>
+</body>
+</html>

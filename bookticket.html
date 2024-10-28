@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garba Nights with ULC</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="container">
+        <header>
+            <h1>Book Your Passes for Garba Nights</h1>
+            <p class="tagline">Experience the Joy of Dance!</p>
+        </header>
+        <div class="garba-animation">
+            <div class="dancer dancer2"></div>
+            <div class="dancer dancer1"></div>
+            <div class="dancer dancer3"></div>
+        </div>
+        <form id="bookingForm">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="contact">Contact No.</label>
+                <input type="text" id="contact" name="contact" minlength="10" maxlength="10" required oninput="validateLength(this)">
+                <span id="error-message" style="color:red; display:none;">Invalid Mobile No.</span>
+            </div>
+            <div class="form-group">
+                <label for="persons">Number of Persons</label>
+                <input type="number" id="persons" name="persons" required min="1">
+            </div>
+            <div class="form-group">
+                <label for="date">Event Date</label>
+                <input type="date" id="date" name="date" required min="2024-10-03" max="2024-10-12">
+            </div>
+            
+            <button type="submit" class="btn-book">Proceed to Payment</button>
+        </form>
+
+        <div class="social-media glass-text"></div>
+        <h2 style="color: rgb(230, 21, 21);">If Passes are Sold then <a href="./contact.html" class="contact-icon">Contact Us!</a></h2>
+
+        <!-- Booking Result -->
+        <div id="bookingResult" class="hidden">
+            <h2>Your Garba Night is Confirmed!</h2>
+            <div class="ticket">
+                <div class="ticket-header">
+                    <a href="https://www.instagram.com/ulcdandiyaaraas/"><img src="./assets/ulclogo.png" alt="Garba Nights Logo" class="logo"></a>
+                    <h3>Garba Nights Pass</h3>
+                </div>
+                <div class="ticket-body">
+                    <p><strong>Name:</strong> <span id="customerName"></span></p>
+                    <p><strong>Persons:</strong> <span id="totalPersons"></span></p>
+                    <p><strong>Total Price:</strong> ₹<span id="totalPrice"></span></p>
+                    <p><strong>Ticket Number:</strong> <span id="ticketNumber"></span></p>
+                    <p><strong>Event Date:</strong> <span id="ticketDate"></span></p>
+                </div>
+                <div class="ticket-footer">
+                    <p>Celebrate, Dance, and Enjoy the Rhythm of Garba! Our Team Will Contact You Soon for Pass Collection.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./Js/script.js"></script>
+</body>
+</html>
